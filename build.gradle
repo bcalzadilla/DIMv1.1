@@ -1,0 +1,75 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0'
+    }
+}
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs '../../lib'
+    }
+}
+
+apply plugin: 'android'
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+def useProjectIfPresent(notation, projectName) {
+    if (project.hasProperty('sdkbuild')) {
+        project(projectName)
+    } else {
+        dependencies.create(notation)
+    }
+}
+
+dependencies {
+    compile useProjectIfPresent('com.thingworx:thingworx-android-sdk:+@aar', ':thingworx-android-sdk')
+    compile useProjectIfPresent('com.thingworx:thingworx-common:+', ':thingworx-android-sdk')
+    compile useProjectIfPresent('com.thingworx:thingworx-communications-client:+', ':thingworx-android-sdk')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.2.4'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.4'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.2.4'
+    compile 'org.slf4j:slf4j-api:1.7.6'
+    compile 'com.github.tony19:logback-android-core:1.1.1-4'
+    compile 'com.github.tony19:logback-android-classic:1.1.1-4'
+    compile 'joda-time:joda-time:2.3'
+    compile 'com.jakewharton:butterknife:5.1.1'
+
+}
+
+//TODO Configure artifactory upload
+//TODO Add java pdf
+//TODO Place all version numbers in gradle.properties
+

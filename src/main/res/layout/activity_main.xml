@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true" />
+
+        <RelativeLayout
+            android:id="@+id/layout_area1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            android:layout_alignParentTop="true">
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/firevector"
+                android:id="@+id/btnFire"
+                android:scaleType="fitXY"
+                android:visibility="invisible"
+                android:background="@drawable/firevector" />
+
+            <ImageButton
+                android:id="@+id/btn_switch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_dialog_info"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/medicalvector"
+                android:id="@+id/btnMedical"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btn_switch"
+                android:visibility="invisible"
+                android:background="@drawable/medicalvector" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/gunvector"
+                android:id="@+id/btnGun"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btnMedical"
+                android:visibility="invisible"
+                android:background="@drawable/gunvector" />
+
+            <ImageButton
+                android:id="@+id/btn_take_photo"
+                android:layout_width="200dp"
+                android:src="@drawable/panicbtn"
+                android:adjustViewBounds="false"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="200dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_area2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#00000000"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/estatusgps"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>
