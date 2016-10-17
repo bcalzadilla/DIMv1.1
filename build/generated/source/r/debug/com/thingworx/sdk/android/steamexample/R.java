@@ -1816,12 +1816,12 @@ containing a value of this type.
         public static final int always=0x7f0a001d;
         public static final int beginning=0x7f0a001a;
         public static final int bottom=0x7f0a0022;
-        public static final int btnFire=0x7f0a0057;
-        public static final int btnGun=0x7f0a005a;
-        public static final int btnMedical=0x7f0a0059;
+        public static final int btnFire=0x7f0a005b;
+        public static final int btnGun=0x7f0a0058;
+        public static final int btnMedical=0x7f0a005a;
         public static final int btn_layout=0x7f0a0054;
-        public static final int btn_switch=0x7f0a0058;
-        public static final int btn_take_photo=0x7f0a005b;
+        public static final int btn_switch=0x7f0a0057;
+        public static final int btn_take_photo=0x7f0a0059;
         public static final int buttonPanel=0x7f0a002e;
         public static final int cancel_action=0x7f0a005f;
         public static final int checkbox=0x7f0a003c;

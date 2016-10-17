@@ -26,20 +26,11 @@
             android:layout_alignParentTop="true">
 
             <ImageButton
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:src="@drawable/firevector"
-                android:id="@+id/btnFire"
-                android:scaleType="fitXY"
-                android:visibility="invisible"
-                android:background="@drawable/firevector" />
-
-            <ImageButton
                 android:id="@+id/btn_switch"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:padding="5dp"
-                android:src="@android:drawable/ic_dialog_info"
+                android:src="@android:drawable/ic_menu_manage"
                 android:scaleType="fitXY"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true" />
@@ -47,24 +38,35 @@
             <ImageButton
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:src="@drawable/medicalvector"
-                android:id="@+id/btnMedical"
+                android:src="@drawable/gunvector"
+                android:id="@+id/btnGun"
                 android:scaleType="fitXY"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/btn_switch"
                 android:visibility="invisible"
-                android:background="@drawable/medicalvector" />
+                android:background="@drawable/gunvector"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/btn_take_photo" />
 
             <ImageButton
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:src="@drawable/gunvector"
-                android:id="@+id/btnGun"
+                android:src="@drawable/medicalvector"
+                android:id="@+id/btnMedical"
                 android:scaleType="fitXY"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/btnMedical"
                 android:visibility="invisible"
-                android:background="@drawable/gunvector" />
+                android:background="@drawable/medicalvector"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/firevector"
+                android:id="@+id/btnFire"
+                android:scaleType="fitXY"
+                android:visibility="invisible"
+                android:background="@drawable/firevector"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/btn_take_photo" />
 
             <ImageButton
                 android:id="@+id/btn_take_photo"
@@ -73,9 +75,10 @@
                 android:adjustViewBounds="false"
                 android:background="#00000000"
                 android:scaleType="fitXY"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_marginBottom="65dp"
+                android:layout_above="@+id/btn_switch"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 

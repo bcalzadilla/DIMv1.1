@@ -28,8 +28,8 @@ public class ThingworxActivity extends Activity {
     protected ConnectionStateObserver connectionStateObserver;
 
     protected AndroidConnectedThingClient client;
-    protected String uri = "ws://192.168.10.197:80/Thingworx/WS";
-    protected String appKey = "c04af2d9-f629-4b34-bad1-b5b5967d18e0";
+    protected String uri = "ws://192.168.10.109:80/Thingworx/WS";
+    protected String appKey = "913f5399-1972-4d61-8aac-02c456f8eef7";
     protected SharedPreferences sharedPrefs;
     protected enum ConnectionState {DISCONNECTED,CONNECTING,CONNECTED};
 
